@@ -1,0 +1,17 @@
+{% extends 'todo/base.html' %}
+{#{% set title="signup" %}#}
+{% block content %}
+    <div class="container">
+
+        <h1>Sign Up</h1>
+        <h4>{{ error }}</h4>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Sign up</button>
+        </form>
+    </div>
+
+{% endblock %}
+
+
