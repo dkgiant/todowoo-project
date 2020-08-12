@@ -6,4 +6,15 @@
         {{ form.as_p }}
         <button type="submit">Update</button>
     </form>
+
+    <form action="{% url 'completetodo' todo.id %}" method="POST">
+        {% csrf_token %}
+        <button type="submit">complete</button>
+    </form>
+
+    <form action="{% url 'deletetodo' todo.id %}" method="POST">
+        {% csrf_token %}
+        <button type="submit">delete</button>
+    </form>
 {% endblock %}
+
