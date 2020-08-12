@@ -13,6 +13,9 @@
         {% csrf_token %}
         <button type="submit">Logout</button>
     </form>
+    <a href="{% url 'currenttodos' %}">Current</a>
+    <a href="{% url 'completedtodos' %}">Complete</a>
+    <a href="{% url 'createtodo' %}">Create</a>
 {% else %}
     <a href="{% url 'loginuser' %}">login</a>
 
